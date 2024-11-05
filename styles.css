@@ -1,0 +1,134 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center; /* Center the title */
+    position: relative; /* This allows us to position the nav links */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Navigation links in the header */
+header nav {
+    position: absolute;
+    right: 20px; /* Align nav links to the right */
+    top: 50%; /* Position it vertically centered */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    header nav {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Section styling */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Scrolling image container */
+.image-scroll-container {
+    width: 100%;
+    overflow: hidden; /* Hide any images that go outside the container */
+    margin-top: 20px;
+}
+
+.image-scroll-wrapper {
+    display: flex;
+    animation: scrollImages 20s linear infinite; /* Add smooth scroll effect */
+}
+
+.image-scroll-wrapper img {
+    width: 300px; /* Set a fixed width for the images */
+    height: 200px; /* Fixed height */
+    margin-right: 20px; /* Space between images */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Animation for scrolling effect */
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Move the images to the left */
+    }
+}
+
+/* For responsive design (stack images vertically in smaller screens) */
+@media screen and (max-width: 600px) {
+    .image-scroll-wrapper img {
+        width: 100%; /* Set images to 100% width on small screens */
+        margin-right: 0; /* No space between images */
+        margin-bottom: 10px; /* Add space between images */
+    }
+
+    /* Remove the scrolling effect for mobile */
+    .image-scroll-wrapper {
+        animation: none;
+        display: block;
+    }
+}
